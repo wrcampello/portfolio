@@ -91,8 +91,8 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Sidebar Fixa */}
-      <aside className="fixed left-0 top-0 h-screen w-16 bg-zinc-900/50 backdrop-blur-sm flex flex-col items-center justify-center gap-6 z-40">
+      {/* Sidebar Fixa - Horizontal no mobile, Vertical no desktop */}
+      <aside className="fixed bottom-0 left-0 right-0 md:left-0 md:top-0 md:bottom-auto md:right-auto h-16 md:h-screen w-full md:w-16 bg-zinc-900/90 md:bg-zinc-900/50 backdrop-blur-sm flex flex-row md:flex-col items-center justify-center gap-4 md:gap-6 z-40 border-t md:border-t-0 border-zinc-800">
         <a
           href="https://www.linkedin.com/in/wilson-ramires-20aa701ab/"
           target="_blank"
@@ -154,33 +154,33 @@ export default function Home() {
       </aside>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center pl-16">
-        <div className="max-w-7xl mx-auto px-8 md:px-16 grid md:grid-cols-2 gap-12 items-center">
+      <section className="min-h-screen flex items-center justify-center px-4 md:px-16 md:pl-24 pt-20 pb-24 md:pb-0 bg-black">
+        <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Texto */}
-          <div className="space-y-6 animate-fadeIn">
-            <p className="text-lg md:text-xl text-zinc-400 font-light">
+          <div className="space-y-4 md:space-y-6 animate-fadeIn text-center md:text-left">
+            <p className="text-base md:text-xl text-zinc-400 font-light">
               Olá, eu sou o
             </p>
-            <h1 className="text-5xl md:text-7xl font-bold">
-              <span className="inline-block min-w-[350px] md:min-w-[600px]">
+            <h1 className="text-3xl md:text-7xl font-bold">
+              <span className="inline-block">
                 {text}
                 <span className="animate-blink">|</span>
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-300 font-light">
+            <p className="text-lg md:text-2xl text-zinc-300 font-light">
               Desenvolvedor Web
             </p>
-            <p className="text-base md:text-lg text-zinc-400">
+            <p className="text-sm md:text-lg text-zinc-400">
               Maringá - Paraná
             </p>
-            <p className="text-base md:text-lg text-zinc-500 max-w-lg leading-relaxed">
+            <p className="text-sm md:text-lg text-zinc-500 max-w-lg leading-relaxed mx-auto md:mx-0">
               Desde sempre curioso, constante aprendiz e apaixonado por
               tecnologia
             </p>
           </div>
 
           {/* Foto com Gradiente */}
-          <div className="relative flex justify-center items-center animate-fadeIn">
+          <div className="relative flex justify-center items-center animate-fadeIn mt-8 md:mt-0">
             <div
               className="absolute inset-0 bg-gradient-to-br from-green-600 via-emerald-500 to-green-800 rounded-full blur-3xl opacity-50 animate-pulse"
               style={{
@@ -190,7 +190,7 @@ export default function Home() {
               }}
             ></div>
             <div
-              className="relative w-80 h-80 md:w-96 md:h-96 overflow-hidden border-4 border-green-500/30 shadow-2xl shadow-green-500/50 transition-all duration-300"
+              className="relative w-56 h-56 md:w-96 md:h-96 overflow-hidden border-4 border-green-500/30 shadow-2xl shadow-green-500/50 transition-all duration-300"
               style={{
                 transform: `perspective(1000px) rotateY(${
                   mousePosition.x * 0.5
@@ -215,64 +215,64 @@ export default function Home() {
       {/* Sobre Section */}
       <section
         id="sobre"
-        className="min-h-screen py-20 px-8 md:px-16 pl-24 bg-gradient-to-b from-black to-zinc-900"
+        className="min-h-screen py-12 md:py-20 px-4 md:px-16 md:pl-24 pb-24 md:pb-20 bg-gradient-to-b from-black to-zinc-900"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold mb-12 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-6xl font-bold mb-8 md:mb-12 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
             Sobre Mim
           </h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <p className="text-lg text-zinc-300 leading-relaxed">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div className="space-y-4 md:space-y-6">
+              <p className="text-base md:text-lg text-zinc-300 leading-relaxed">
                 Desenvolvedor web com mais de 22 anos de experiência,
                 especializado em PHP e WordPress. Trabalho criando sites e
                 portais com foco em performance e boa experiência do usuário.
               </p>
-              <p className="text-lg text-zinc-300 leading-relaxed">
+              <p className="text-base md:text-lg text-zinc-300 leading-relaxed">
                 Ao longo da carreira, desenvolvi projetos para empresas no
                 Brasil e exterior, desde sites institucionais até aplicações
                 personalizadas.
               </p>
-              <p className="text-lg text-zinc-300 leading-relaxed">
+              <p className="text-base md:text-lg text-zinc-300 leading-relaxed">
                 Trabalhei nos portais{" "}
                 <span className="text-green-400 font-semibold">Omelete</span> e
                 PointNerd e Portais da Rede São Camilo SP .
               </p>
-              <p className="text-lg text-zinc-300 leading-relaxed">
+              <p className="text-base md:text-lg text-zinc-300 leading-relaxed">
                 <span className="text-green-400 font-semibold">
                   Atualmente estudando JavaScript
                 </span>
                 , React, Next.js e Vite.
               </p>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 md:space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-green-400 mb-4">
+                <h3 className="text-xl md:text-2xl font-bold text-green-400 mb-3 md:mb-4">
                   Tecnologias
                 </h3>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
                   {["PHP", "Python", "WordPress", "Laravel"].map((tech) => (
                     <div
                       key={tech}
-                      className="p-4 bg-zinc-800/50 backdrop-blur-sm rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20"
+                      className="p-3 md:p-4 bg-zinc-800/50 backdrop-blur-sm rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20"
                     >
-                      <p className="font-semibold text-center">{tech}</p>
+                      <p className="font-semibold text-center text-sm md:text-base">{tech}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-emerald-400 mb-4">
+                <h3 className="text-xl md:text-2xl font-bold text-emerald-400 mb-3 md:mb-4">
                   Estudando...
                 </h3>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
                   {["JavaScript", "React", "Next.js", "Vite"].map((tech) => (
                     <div
                       key={tech}
-                      className="p-4 bg-zinc-800/50 backdrop-blur-sm rounded-lg border border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20"
+                      className="p-3 md:p-4 bg-zinc-800/50 backdrop-blur-sm rounded-lg border border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20"
                     >
-                      <p className="font-semibold text-center">{tech}</p>
+                      <p className="font-semibold text-center text-sm md:text-base">{tech}</p>
                     </div>
                   ))}
                 </div>
@@ -285,13 +285,13 @@ export default function Home() {
       {/* Projetos Section */}
       <section
         id="projetos"
-        className="min-h-screen py-20 px-8 md:px-16 pl-24 bg-black"
+        className="min-h-screen py-12 md:py-20 px-4 md:px-16 md:pl-24 pb-24 md:pb-20 bg-black"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold mb-12 bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-6xl font-bold mb-8 md:mb-12 bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent">
             Projetos
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Projeto 1 - Hospital São Camilo */}
             <div className="group relative bg-zinc-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-zinc-800 hover:border-green-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
               <div className="absolute inset-0 bg-gradient-to-br from-green-600/10 to-emerald-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -463,13 +463,13 @@ export default function Home() {
       {/* Contato Section */}
       <section
         id="contato"
-        className="min-h-screen py-20 px-8 md:px-16 pl-24 bg-gradient-to-b from-zinc-900 to-black flex items-center"
+        className="min-h-screen py-12 md:py-20 px-4 md:px-16 md:pl-24 pb-28 md:pb-20 bg-gradient-to-b from-zinc-900 to-black flex items-center"
       >
         <div className="max-w-4xl mx-auto text-center w-full">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
             Vamos Trabalhar Juntos?
           </h2>
-          <p className="text-xl text-zinc-400 mb-12 max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-zinc-400 mb-8 md:mb-12 max-w-2xl mx-auto">
             Estou sempre aberto a novos projetos e oportunidades. Entre em
             contato!
           </p>
@@ -498,9 +498,9 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-8 pl-24 border-t border-zinc-800 bg-black">
+      <footer className="py-6 md:py-8 px-4 md:px-8 md:pl-24 pb-20 md:pb-8 border-t border-zinc-800 bg-black">
         <div className="max-w-6xl mx-auto text-center text-zinc-500">
-          <p>© 2024 Wilson Ramires. Desenvolvido com Next.js e Tailwind CSS</p>
+          <p className="text-sm md:text-base">© 2024 Wilson Ramires. Desenvolvido com Next.js e Tailwind CSS</p>
         </div>
       </footer>
     </div>
